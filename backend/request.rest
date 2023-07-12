@@ -1,0 +1,98 @@
+// Create User
+POST  http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "Thor fin",
+    "email": "thor@gmail.com",
+    "password": "123456",
+    "confPassword": "123456",
+    "role": "user"
+}  
+
+###
+// get All Users
+
+GET http://localhost:5000/users
+
+###
+// get Single Users
+
+GET http://localhost:5000/users/ad0018a7-29a2-42a4-a864-8a054c5ce650
+
+###
+// Update a User
+PATCH http://localhost:5000/users/ad0018a7-29a2-42a4-a864-8a054c5ce650
+Content-Type: application/json
+
+{
+    "name": "Thor fin kalsveni",
+    "email": "thor@gmail.com",
+    "password": "",
+    "confPassword": "",
+    "role": "user"
+}
+
+###
+// Delete an User
+DELETE  http://localhost:5000/users/ad0018a7-29a2-42a4-a864-8a054c5ce650
+
+###
+// Login User ADMIN
+POST  http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "admin@gmail.com",
+    "password": "123456"
+}
+
+###
+// Login User
+POST  http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "thor@gmail.com",
+    "password": "123456"
+}
+
+###
+// Menampilkan Siapa yang Login
+GET http://localhost:5000/me
+
+###
+// Logout
+DELETE http://localhost:5000/logout
+
+###
+/// get all product
+GET http://localhost:5000/products
+
+###
+/// get single product
+GET http://localhost:5000/products/3e07f78a-ee5d-407d-acb1-acfc8098b579
+
+###
+/// post data product
+POST  http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "name": "Sepatu Nike",
+    "price": 999
+}
+
+###
+/// update data product
+PATCH http://localhost:5000/products/3e07f78a-ee5d-407d-acb1-acfc8098b579
+Content-Type: application/json
+
+{
+    "name": "Sepatu Nike V.2",
+    "price": 999
+}
+
+###
+/// DELETE single product
+DELETE http://localhost:5000/products/3e07f78a-ee5d-407d-acb1-acfc8098b579
